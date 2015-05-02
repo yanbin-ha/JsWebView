@@ -108,7 +108,8 @@
 }
 
 - (NSMutableDictionary *)parseQuery:(NSString *)query {
-    NSArray *queryArray = [query componentsSeparatedByString:@"&"];
+    NSString *temp = [query stringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSArray *queryArray = [temp componentsSeparatedByString:@"&"];
     NSInteger count = [queryArray count];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
 

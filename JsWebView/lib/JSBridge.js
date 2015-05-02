@@ -24,7 +24,7 @@
       for (var i in querystring) {
         qs.push(i + '=' + querystring[i]);
       }
-      url += '?' + qs.join('&');
+      url += '?' + encodeURIComponent(qs.join('&'));
     }
     global.location.href = url;
   };
