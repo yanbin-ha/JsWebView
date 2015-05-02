@@ -17,7 +17,7 @@
   };
 
   var _exec = function(host, querystring) {
-    var url = 'jsbrige://' + host;
+    var url = 'jsbridge://' + host;
 
     if (querystring) {
       var qs = [];
