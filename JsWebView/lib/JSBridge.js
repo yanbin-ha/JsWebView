@@ -75,9 +75,9 @@
 
   JSBridge.init();
 
-  global.JSBridge = JSBridge;
-
   var readyEvent = doc.createEvent('Events');
   readyEvent.initEvent('JSBridgeReady');
   doc.dispatchEvent(readyEvent);
+  
+  global.JSBridge = JSBridge;
 })(this);
